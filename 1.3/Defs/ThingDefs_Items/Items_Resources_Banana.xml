@@ -9,7 +9,7 @@
     <label>zombie chunks</label>
     <description>Pieces of miscellaneous meat from an undead. Perhaps they have a use.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Plasteel</texPath>
+      <texPath>Things/Item/Resource/ARCCZombieChunks</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Metal_Drop</soundInteract>
