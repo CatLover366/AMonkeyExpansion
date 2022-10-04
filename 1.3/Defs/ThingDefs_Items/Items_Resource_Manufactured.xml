@@ -66,4 +66,39 @@
 
   </ThingDef>
 
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>CureScariaBanacea</defName>
+    <label>cure scaria with banacea</label>
+    <description>Use banacea's special properties to cure scaria.</description>
+    <workerClass>Recipe_RemoveHediff</workerClass>
+    <jobString>Curing scaria with banacea.</jobString>
+    <workAmount>4500</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>false</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <removesHediff>Scaria</removesHediff>
+    <successfullyRemovedHediffMessage>{0} has successfully cured {1}'s scaria using banacea.</successfullyRemovedHediffMessage>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ARCC_Banacea</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ARCC_Banacea</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
 </Defs>
