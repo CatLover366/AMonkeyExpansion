@@ -16,7 +16,6 @@
     <soundDrop>Metal_Drop</soundDrop>
     <useHitPoints>false</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <tradeability>None</tradeability>
     <statBases>
       <MarketValue>1</MarketValue>
       <Mass>0.2</Mass>
