@@ -12,6 +12,7 @@
     <description>A mix of herbs, bananas, and zombie bits. When administered correctly, can cure scaria.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Medicine/Banacea</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.85</drawSize>
     </graphicData>
 
