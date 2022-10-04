@@ -16,6 +16,10 @@
       <drawSize>0.85</drawSize>
     </graphicData>
 
+    <thingCategories>
+      <li>Medicine</li>
+</thingCategories>
+
     <techLevel>Neolithic</techLevel>
      <stackLimit>25</stackLimit>
       <healthAffectsPrice>false</healthAffectsPrice>
