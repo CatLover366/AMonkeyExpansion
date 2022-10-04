@@ -3,6 +3,29 @@
 
 
   <!--=========================== Banana Materials ==============================-->
+	
+  <ThingDef ParentName="ResourceBase">
+    <defName>ARCCZombieChunks</defName>
+    <label>zombie chunks</label>
+    <description>Pieces of miscellaneous meat from an undead. Perhaps they have a use.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Plasteel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>1</MarketValue>
+      <Mass>0.2</Mass>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <allowedArchonexusCount>69</allowedArchonexusCount>
+  </ThingDef>
 
   <ThingDef ParentName="StoneBlocksBase">
     <defName>ARCCAdonana</defName>
