@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
- <ThingDef ParentName="MedicineBase">
+<!--=========================== Banana medicinal Stuff==============================-->
+
+<!--=========================== Banacea==============================-->
+
+ <ThingDef ParentName="ResourceBase">
+
     <defName>ARCC_Banacea</defName>
     <label>Banana Panacea</label>
     <description>A mix of herbs, bananas, and zombie bits. When administered correctly, can cure scaria.</description>
@@ -10,19 +15,29 @@
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.85</drawSize>
     </graphicData>
+
     <techLevel>Neolithic</techLevel>
+     <stackLimit>25</stackLimit>
+      <healthAffectsPrice>false</healthAffectsPrice>
+      <uiIconForStackCount>1</uiIconForStackCount>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+
     <statBases>
+    <MaxHitPoints>60</MaxHitPoints>
       <MarketValue>300</MarketValue>
       <Mass>0.80</Mass>
       <Flammability>1.3</Flammability>
        <WorkToMake>4000</WorkToMake>
       <DeteriorationRate>6</DeteriorationRate>
     </statBases>
+
      <costList>
       <MedicineHerbal>10</MedicineHerbal>
       <ARCCRawBananas>100</ARCCRawBananas>
       <ARCCZombieChunks>10</ARCCZombieChunks>
     </costList>
+
      <recipeMaker>
       <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Intellectual</workSkill>
@@ -30,18 +45,21 @@
         <li>CraftingSpot</li>
       </recipeUsers>
       <researchPrerequisite>ARCC_BanaceaResearch</researchPrerequisite>
+
       <skillRequirements>
         <Crafting>4</Crafting>
         <Intellectual>13</Intellectual>
       </skillRequirements>
     </recipeMaker>
     <tickerType>Rare</tickerType>
+
     <comps>
       <li Class="CompProperties_Rottable">
         <daysToRotStart>10</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
+
   </ThingDef>
 
 </Defs>
