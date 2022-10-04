@@ -12,7 +12,6 @@
     <description>A mix of herbs, bananas, and zombie bits. When administered correctly, can cure scaria.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Medicine/Banacea</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.85</drawSize>
     </graphicData>
 
@@ -21,7 +20,7 @@
 </thingCategories>
 
     <techLevel>Neolithic</techLevel>
-     <stackLimit>25</stackLimit>
+     <stackLimit>5</stackLimit>
       <healthAffectsPrice>false</healthAffectsPrice>
       <uiIconForStackCount>1</uiIconForStackCount>
     <soundInteract>Standard_Drop</soundInteract>
