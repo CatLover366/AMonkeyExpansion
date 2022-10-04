@@ -39,6 +39,7 @@
      <costList>
       <MedicineHerbal>10</MedicineHerbal>
       <ARCCRawBananas>100</ARCCRawBananas>
+      <ARCCZombieChunks>10</ARCCZombieChunks>
     </costList>
 
      <recipeMaker>
