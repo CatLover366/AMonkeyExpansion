@@ -44,4 +44,18 @@
   <researchViewY>2.25</researchViewY>
 	</ResearchProjectDef>
 
+<ResearchProjectDef>
+		<defName>ARCC_BanaceaResearch</defName>
+		<label>banana curing</label>
+		<description>Examine basic anti scaria techniques and see if they can be reproduced with a mix of bananas and zombie bits.</description>
+		<baseCost>2000</baseCost>
+		<tab>ARCCBananaMod</tab>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>ARCC_BananaSowing</li>
+		</prerequisites>
+  <researchViewX>1.5</researchViewX>
+  <researchViewY>2.9</researchViewY>
+	</ResearchProjectDef>
+
 </Defs>
