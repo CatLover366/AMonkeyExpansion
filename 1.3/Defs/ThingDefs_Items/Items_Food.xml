@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="MealCooked">
+    <defName>ARCCBananaMealSimple</defName>
+    <label>simple banana meal</label>
+    <description>A simple meal cooked completely from bananas.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/ARCCBananaMealSimple</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>15</MarketValue>
+      <WorkToMake>300</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <tasteThought>AteSimpleBananaMeal</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef Name="ARCCBananaMealFineBase" ParentName="MealCookedIngredientless" Abstract="True">
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <WorkToMake>450</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealFine</preferability>
+      <tasteThought>AteFineBananaMeal</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="ARCCBananaMealFineBase">
+    <defName>ARCCBananaMealFine</defName>
+    <label>fine banana meal</label>
+    <description>A complex dish assembled with care from a variety of ingredients, but mostly of bananas. It takes great skill to make a palatable dish when it is mostly made of bananas.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/ARCCBananaMealFine</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Ingredients"/>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="ARCCBananaMealLavishBase" ParentName="MealCookedIngredientless" Abstract="True">
+    <description>A masterpiece of cooking. No normal cook could reasonably hope to balance the flavor profile of a dish that uses as many bananas as this meal does, but a truly skilled chef has managed to strike that delicate balance. This meal is physical proof that just because one returns to monke does not necessarily mean that they must give up their cultured nature.</description>
+    <statBases>
+      <MarketValue>40</MarketValue>
+      <WorkToMake>800</WorkToMake>
+      <Nutrition>1</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealLavish</preferability>
+      <tasteThought>AteLavishBananaMeal</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="ARCCBananaMealLavishBase">
+    <defName>ARCCBananaMealLavish</defName>
+    <label>lavish banana meal</label>
+    <graphicData>
+      <texPath>Things/Item/Meal/ARCCBananaMealLavish</texPath>
+      <graphicClass>Graphic_MealVariants</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Ingredients" />
+    </comps>
+  </ThingDef>
+
+  <!-- ======= Meal thoughts ========= -->
+
+  <ThoughtDef>
+    <defName>AteSimpleBananaMeal</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate simple banana meal</label>
+        <description>I do like me a good banana.</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>AteFineBananaMeal</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate fine banana meal</label>
+        <description>What a tasty dish. Who knew that bananas and protein could taste so good together!</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>AteLavishBananaMeal</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate lavish banana meal</label>
+        <description>The spectrum of banana flavors are indescribable. It is as if I experienced tasting a banana for the first time a dozen times over. Truly a meal fit for the highest echelons of power for any cultured civilization.</description>
+        <baseMoodEffect>14</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+  <!--=================================== Meal recipes ==========================================-->
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>ARCCCookBananaMealSimple</defName>
+    <label>cook simple banana meal</label>
+    <description>Cook a banana meal.</description>
+    <jobString>Cooking simple banana meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <workAmount>300</workAmount>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ARCCRawBananas</li>
+          </thingDefs>
+        </filter>
+        <count>0.55</count>
+      </li>
+    </ingredients>
+    <products>
+      <ARCCBananaMealSimple>1</ARCCBananaMealSimple>
+    </products>
+    <workSkill>Cooking</workSkill>
+		<recipeUsers>
+			<li>ElectricStove</li>	
+			<li>FueledStove</li>			
+		</recipeUsers>
+		<skillRequirements>
+			<Cooking>2</Cooking>
+		</skillRequirements>
+    <researchPrerequisite>ARCC_BananaCooking</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>ARCCCookBananaMealSimpleBulk</defName>
+    <label>cook simple banana meal x4</label>
+    <description>Cook a bulk recipe of banana meals.</description>
+    <jobString>Cooking simple banana meal x4.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <workAmount>1200</workAmount>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ARCCRawBananas</li>
+          </thingDefs>
+        </filter>
+        <count>2.2</count>
+      </li>
+    </ingredients>
+    <products>
+      <ARCCBananaMealSimple>4</ARCCBananaMealSimple>
+    </products>
+    <workSkill>Cooking</workSkill>
+		<recipeUsers>
+			<li>ElectricStove</li>	
+			<li>FueledStove</li>			
+		</recipeUsers>
+		<skillRequirements>
+			<Cooking>3</Cooking>
+		</skillRequirements>
+    <researchPrerequisite>ARCC_BananaCooking</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>ARCCCookBananaMealFine</defName>
+    <label>cook fine banana meal</label>
+    <description>Cook a fine banana meal composed of carefully prepared bananas and protein.</description>
+    <jobString>Cooking fine banana meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <workAmount>450</workAmount>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ARCCRawBananas</li>
+          </thingDefs>
+        </filter>
+        <count>0.30</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>0.25</count>
+      </li>
+    </ingredients>
+    <products>
+      <ARCCBananaMealFine>1</ARCCBananaMealFine>
+    </products>
+    <workSkill>Cooking</workSkill>
+		<recipeUsers>
+			<li>ElectricStove</li>	
+			<li>FueledStove</li>			
+		</recipeUsers>
+		<skillRequirements>
+			<Cooking>7</Cooking>
+		</skillRequirements>
+    <researchPrerequisite>ARCC_BananaCooking</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>ARCCCookBananaMealFineBulk</defName>
+    <label>cook fine banana meal x4</label>
+    <description>Cook a bulk recipe of fine banana meals composed of carefully prepared bananas and protein.</description>
+    <jobString>Cooking fine banana meal x4.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <workAmount>1800</workAmount>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ARCCRawBananas</li>
+          </thingDefs>
+        </filter>
+        <count>1.20</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>1.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <ARCCBananaMealFine>4</ARCCBananaMealFine>
+    </products>
+    <workSkill>Cooking</workSkill>
+		<recipeUsers>
+			<li>ElectricStove</li>	
+			<li>FueledStove</li>			
+		</recipeUsers>
+		<skillRequirements>
+			<Cooking>8</Cooking>
+		</skillRequirements>
+    <researchPrerequisite>ARCC_BananaCooking</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>ARCCCookBananaMealLavish</defName>
+    <label>cook lavish banana meal</label>
+    <description>Cook a lavish banana meal composed of masterfully prepared bananas and protein, with extra care taken to make sure the flavor is balanced.</description>
+    <jobString>Cooking lavish banana meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <workAmount>800</workAmount>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ARCCRawBananas</li>
+          </thingDefs>
+        </filter>
+        <count>0.6</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <ARCCBananaMealLavish>1</ARCCBananaMealLavish>
+    </products>
+    <workSkill>Cooking</workSkill>
+		<recipeUsers>
+			<li>ElectricStove</li>	
+			<li>FueledStove</li>			
+		</recipeUsers>
+		<skillRequirements>
+			<Cooking>10</Cooking>
+		</skillRequirements>
+    <researchPrerequisite>ARCC_BananaCooking</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>ARCCCookBananaMealLavishBulk</defName>
+    <label>cook lavish banana meal x4</label>
+    <description>Move around the kitchen with rapid efficiency and skill to cook a bulk recipe of lavish banana meals composed of masterfully prepared bananas and protein, with extra care taken to make sure the flavor is balanced.</description>
+    <jobString>Cooking lavish banana meal x4.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <workAmount>3200</workAmount>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ARCCRawBananas</li>
+          </thingDefs>
+        </filter>
+        <count>2.4</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>2.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <ARCCBananaMealLavish>4</ARCCBananaMealLavish>
+    </products>
+    <workSkill>Cooking</workSkill>
+		<recipeUsers>
+			<li>ElectricStove</li>	
+			<li>FueledStove</li>			
+		</recipeUsers>
+		<skillRequirements>
+			<Cooking>12</Cooking>
+		</skillRequirements>
+    <researchPrerequisite>ARCC_BananaCooking</researchPrerequisite>
+  </RecipeDef>
+
+</Defs>

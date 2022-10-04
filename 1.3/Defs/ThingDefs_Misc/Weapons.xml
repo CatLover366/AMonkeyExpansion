@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<!--Shuriken-->
+
+ <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>ARCCGun_Banana</defName>
+    <label>dense banana bunch</label>
+    <description>A bunch of bananas that are meant to be thrown at an enemy. It achieves lethality by forcing the wielder to adopt a particular throwing technique that exploits the weaknesses of enemies. Or it could be the chunks of heavy adonana bricks that were stuffed inside the bananas causing that much damage.</description>
+	
+    <graphicData>
+      <texPath>Things/Weapons/ARCCbananabunch</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>ARCC_BasicBananaWeapons</researchPrerequisite>
+      <recipeUsers>
+      	<li>FueledSmithy</li>	
+      	<li>ElectricSmithy</li>			
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>2</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+        <ARCCAdonana>50</ARCCAdonana>
+        <ARCCRawBananas>75</ARCCRawBananas>
+    </costList>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ARCCBullet_Banana</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>20.9</range> <!--(30)-->
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+		<soundCast>ThrowGrenade</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>banana</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+      <li>
+        <label>banana stem</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>ARCCBullet_Banana</defName>
+    <label>dense banana</label>
+    <graphicData>
+      <texPath>Things/Projectile/ARCCairbornebanana</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>50</speed>
+    </projectile>
+	
+	<comps>
+      <li Class="CustomAmmo.CompProperties_ProjectileEffects">
+        <rotating>true</rotating>
+        <rotationSpeed>40</rotationSpeed>
+        <counterClockwise>true</counterClockwise>
+      </li> 
+    </comps>
+  </ThingDef>
+  
+  
+  </Defs>

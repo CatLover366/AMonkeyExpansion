@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!--=========================== Banana Materials ==============================-->
+
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>ARCCAdonana</defName>
+    <label>adonana bricks</label>
+    <description>Bananas mashed together and pressed into a brick shape. It is somewhat soft and fragile, but the process of compressing and drying have made the bricks inflammable.</description>
+    <graphicData>
+      <color>(204,170,0)</color>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <SharpDamageMultiplier>0.2</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.7</BluntDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <color>(204,170,0)</color>
+      <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>adonana</stuffAdjective>
+      <commonality>0.0</commonality>
+      <statFactors>
+        <Beauty>1.2</Beauty>  
+        <MaxHitPoints>0.9</MaxHitPoints>
+        <WorkToBuild>1.5</WorkToBuild>
+        <WorkToMake>1.1</WorkToMake>
+      </statFactors>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <allowedArchonexusCount>420</allowedArchonexusCount>
+  </ThingDef>
+
+  <RecipeDef ParentName="MakeStoneBlocksBase">
+    <defName>Make_ARCCAdonana</defName>
+    <label>make adonana bricks</label>
+    <description>Mash, compress, and dry bananas into a type of adobe brick.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ARCCRawBananas</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+		<recipeUsers>
+			<li>CraftingSpot</li>	
+			<li>TableStonecutter</li>			
+		</recipeUsers>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ARCCRawBananas</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ARCCAdonana>25</ARCCAdonana>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="MakeStoneBlocksBase">
+    <defName>Make_ARCCAdonanaBulk</defName>
+    <label>make adonana bricks in bulk</label>
+    <description>Mash, compress, and dry lots of bananas into a type of adobe brick.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ARCCRawBananas</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+    </ingredients>
+		<recipeUsers>
+			<li>CraftingSpot</li>	
+			<li>TableStonecutter</li>			
+		</recipeUsers>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ARCCRawBananas</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ARCCAdonana>75</ARCCAdonana>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ARCCBaninium</defName>
+    <label>baninium</label>
+    <description>Advanced spacer tech structural material. Plasteel is extremely strong due to its unique molecular structure.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Plasteel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.25</Mass>
+      <StuffPower_Armor_Sharp>1.14</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.55</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.65</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <commonality>0.05</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(255,244,159)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>2.8</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>2.2</WorkToMake>
+        <WorkToBuild>2.2</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <allowedArchonexusCount>80</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>

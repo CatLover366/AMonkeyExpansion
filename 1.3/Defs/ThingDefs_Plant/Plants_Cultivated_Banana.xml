@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!--=========================== Tree crops ==============================-->
+
+  <ThingDef ParentName="TreeBase">
+    <defName>ARCCPlant_TreeBanana</defName>
+    <label>banana tree</label>
+    <description>A tropical tree that produces bananas, genetically engineered to well... make the bananas it produces very special, and survive in slightly less-warm climates. These banana trees do not wither away and die when their fruit is harvested.</description>
+    <graphicData>
+      <texPath>Things/Plant/ARCCBananaPalm</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+        <shadowData>
+          <volume>(0.15, 0.3, 0.15)</volume>
+          <offset>(0,0,-0.38)</offset>
+        </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <statBases>
+      <Beauty>2</Beauty>
+      <BeautyOutdoors>2</BeautyOutdoors>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+    <minifiedDef IsNull="True" />
+    <ingestible />
+    <plant>
+      <dieIfLeafless>true</dieIfLeafless>
+      <growDays>15</growDays>
+      <visualSizeRange>0.8~2.0</visualSizeRange>
+      <sowMinSkill>8</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <sowResearchPrerequisites Inherit="False">
+        <li>ARCC_BananaSowing</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0.15</topWindExposure>
+      <mustBeWildToSow>false</mustBeWildToSow>
+      <immatureGraphicPath>Things/Plant/ARCCBananaPalm_Immature</immatureGraphicPath>
+      <harvestWork>400</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestAfterGrowth>0.30</harvestAfterGrowth>
+      <forceIsTree>true</forceIsTree>
+      <harvestYield>30</harvestYield>
+      <harvestedThingDef>ARCCRawBananas</harvestedThingDef>
+      <harvestFailable>true</harvestFailable>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>ARCCRawBananas</defName>
+    <label>bananas</label>
+    <description>Delicious bananas. Nice to eat on their own. They are botanically classed as berries.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/ARCCBananas</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.2</MarketValue>
+      <Mass>0.027</Mass>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <tasteThought></tasteThought>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+  </ThingDef>
+
+</Defs>

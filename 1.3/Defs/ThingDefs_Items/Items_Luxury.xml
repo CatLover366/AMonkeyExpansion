@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ARCCBananaSmoothie</defName>
+    <label>Banana Smoothie</label>
+    <description>A slurry of bananas, pulped, chilled, and poured inside a novelty cup, complete with mini umbrella and straw. It fulfills the need for recreation, but it is not very nutritious.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/ARCCBananaSmoothie</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>5</MarketValue>
+      <Mass>0.075</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>8</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <foodType>Processed</foodType>
+      <joy>0.15</joy>
+      <joyKind>Gluttonous</joyKind>
+      <maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <allowedArchonexusCount>80</allowedArchonexusCount>
+  </ThingDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>ARCCMakeBananaSmoothie</defName>
+    <label>make banana smoothie x4</label>
+    <description>Blend a bunch of bananas into a delicious slurry, chill it, and pour it in cups. And of course place the mini umbrellas and straws in. It just wouldn't be tropical if those two elements were absent.</description>
+    <jobString>Cooking lavish banana meal x4.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <workAmount>500</workAmount>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ARCCRawBananas</li>
+          </thingDefs>
+        </filter>
+        <count>0.3</count>
+      </li>
+    </ingredients>
+    <products>
+      <ARCCBananaSmoothie>4</ARCCBananaSmoothie>
+    </products>
+    <workSkill>Cooking</workSkill>
+		<recipeUsers>
+			<li>ElectricStove</li>	
+			<li>FueledStove</li>			
+		</recipeUsers>
+		<skillRequirements>
+			<Cooking>5</Cooking>
+		</skillRequirements>
+    <researchPrerequisite>ARCC_BananaCooking</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>ARCCMakeBananaSmoothieBulk</defName>
+    <label>make banana smoothie x20</label>
+    <description>Blend an unreasonable amount of bananas into a slurry, chill the massive pitcher of smoothie, and serve all of it in cups. And obviously place the mini umbrellas and straws in. It just wouldn't be tropical if those two elements were absent.</description>
+    <jobString>Cooking lavish banana meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <workAmount>2400</workAmount>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ARCCRawBananas</li>
+          </thingDefs>
+        </filter>
+        <count>1.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <ARCCBananaSmoothie>20</ARCCBananaSmoothie>
+    </products>
+    <workSkill>Cooking</workSkill>
+		<recipeUsers>
+			<li>ElectricStove</li>	
+			<li>FueledStove</li>			
+		</recipeUsers>
+		<skillRequirements>
+			<Cooking>6</Cooking>
+		</skillRequirements>
+    <researchPrerequisite>ARCC_BananaCooking</researchPrerequisite>
+  </RecipeDef>
+</Defs>

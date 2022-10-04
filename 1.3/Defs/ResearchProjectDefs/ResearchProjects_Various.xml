@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>ARCC_BananaSowing</defName>
+		<label>banana sowing</label>
+		<description>Learn how to grow banana trees, which produce delicious delicious bananas.</description>
+		<baseCost>1000</baseCost>
+		<tab>ARCCBananaMod</tab>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>TreeSowing</li>
+		</prerequisites>
+  <researchViewX>0.00</researchViewX>
+  <researchViewY>2.25</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ARCC_BananaCooking</defName>
+		<label>banana gastronomy</label>
+		<description>Examine basic cooking principles and see if they can be replicated with bananas.</description>
+		<baseCost>750</baseCost>
+		<tab>ARCCBananaMod</tab>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>ARCC_BananaSowing</li>
+		</prerequisites>
+  <researchViewX>0.00</researchViewX>
+  <researchViewY>2.75</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ARCC_BasicBananaWeapons</defName>
+		<label>basic banana weapons</label>
+		<description>Use basic weapon smithing concepts to create relatively basic banana based weaponry.</description>
+		<baseCost>750</baseCost>
+		<tab>ARCCBananaMod</tab>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>ARCC_BananaSowing</li>
+			<li>Smithing</li>
+		</prerequisites>
+  <researchViewX>1.00</researchViewX>
+  <researchViewY>2.25</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>
