@@ -93,7 +93,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>ARCCBaninium</defName>
     <label>baninium</label>
-    <description>Advanced spacer tech structural material. Plasteel is extremely strong due to its unique molecular structure.</description>
+    <description>Advanced spacer tech structural material. Bananiuim is extremely strong due to its unique molecular structure, and Bananas.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Plasteel</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>A Monkey Expansion</name>
-  <author>TheCatLover366, Elseud, Sovereign, flango, SoldierGG1, Sandwish, ThatBartGuy</author>
+  <author>TheCatLover366, Elseud, Sovereign, flango, SoldierGG1, Sandwish, ThatBartGuy, Bram</author>
   <supportedVersions>
     <li>1.3</li>
   </supportedVersions>
@@ -10,7 +10,7 @@
     <li>Djeeshka.CMT.Retexture</li>
   </loadAfter>
   <packageId>CatLover366.MonkeTime</packageId>
-  <description>At last, you can return to monke.</description>
+  <description>At last, you can return to monke. Mad for Mr Samuel Streamers Monke vs Zombies modpack.</description>
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>
