@@ -29,7 +29,7 @@
   <ThingDef ParentName="StoneBlocksBase">
     <defName>ARCCAdonana</defName>
     <label>adonana bricks</label>
-    <description>Bananas mashed together and pressed into a brick shape. It is somewhat soft and fragile, but the process of compressing and drying have made the bricks inflammable.</description>
+    <description>Bananas mashed together and pressed into a brick shape. It is somewhat soft and fragile, but the process of compressing and the high moisture content of the bananas have made the bricks nonflammable.</description>
     <graphicData>
       <color>(204,170,0)</color>
     </graphicData>
@@ -50,6 +50,7 @@
         <MaxHitPoints>0.9</MaxHitPoints>
         <WorkToBuild>1.5</WorkToBuild>
         <WorkToMake>1.1</WorkToMake>
+	<Flammability>0</Flammability>
       </statFactors>
       <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
     </stuffProps>
