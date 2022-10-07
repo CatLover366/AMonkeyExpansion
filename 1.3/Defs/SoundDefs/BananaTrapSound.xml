@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<SoundDef>
+    <defName>SlippedSound</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Misc/Trap/TrapSpring</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>50~80</volumeRange>      
+        <pitchRange>1~1.5</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>
