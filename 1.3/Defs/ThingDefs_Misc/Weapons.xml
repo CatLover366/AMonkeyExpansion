@@ -103,7 +103,7 @@
       <texPath>Things/Weapons/ARCCBananaBow</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>Interact_Rifle</soundInteract>
+    <soundInteract>Bow_Large</soundInteract>
     <generateCommonality>0.0</generateCommonality>
     <statBases>
       <WorkToMake>20000</WorkToMake>
@@ -127,7 +127,7 @@
         <warmupTime>3.5</warmupTime>
         <range>25.9</range>
         <burstShotCount>1</burstShotCount>
-        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCast>Bow_Large</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>14</muzzleFlashScale>
         <targetParams>
@@ -137,18 +137,9 @@
     </verbs>
     <tools>
       <li>
-        <label>stock</label>
+        <label>limb</label>
         <capacities>
           <li>Blunt</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
         </capacities>
         <power>9</power>
         <cooldownTime>2</cooldownTime>
@@ -157,9 +148,9 @@
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
     <defName>ARCCBananaBombArrow</defName>
-    <label>incendiary bolt</label>
+    <label>banana bomb arrow</label>
     <graphicData>
-      <texPath>Things/Projectile/LauncherShot</texPath>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <color>(254,189,58)</color>
@@ -171,7 +162,7 @@
       <damageAmountBase>20</damageAmountBase>
       <explosionRadius>1.1</explosionRadius>
       <preExplosionSpawnThingDef>ARCCBananaTrap</preExplosionSpawnThingDef>
-      <preExplosionSpawnChance>0.3</preExplosionSpawnChance>
+      <preExplosionSpawnChance>0.4</preExplosionSpawnChance>
       <ai_IsIncendiary>true</ai_IsIncendiary>
       <arcHeightFactor>0.2</arcHeightFactor>
       <shadowSize>0.6</shadowSize>
