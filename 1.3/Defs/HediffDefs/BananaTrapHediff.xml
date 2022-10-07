@@ -4,6 +4,7 @@
     <defName>Slipped</defName>
     <label>slipped!</label>
     <description>Slipped on a banana peel</description>
+    <hediffClass>HediffWithComps</hediffClass>
     <initialSeverity>1</initialSeverity>
     <maxSeverity>1</maxSeverity>
     <comps>
