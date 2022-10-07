@@ -162,9 +162,8 @@
       <damageAmountBase>20</damageAmountBase>
       <explosionRadius>1.1</explosionRadius>
       <preExplosionSpawnThingDef>ARCCBananaTrap</preExplosionSpawnThingDef>
-      <preExplosionSpawnChance>0.4</preExplosionSpawnChance>
-      <ai_IsIncendiary>true</ai_IsIncendiary>
-      <arcHeightFactor>0.2</arcHeightFactor>
+      <preExplosionSpawnChance>0.0</preExplosionSpawnChance>
+      <ai_IsIncendiary>false</ai_IsIncendiary>
       <shadowSize>0.6</shadowSize>
     </projectile>
   </ThingDef>
