@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BananaTraps", "BananaTraps.csproj", "{216B1697-4D1A-487D-BAC4-3A06DC3FC145}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{216B1697-4D1A-487D-BAC4-3A06DC3FC145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216B1697-4D1A-487D-BAC4-3A06DC3FC145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216B1697-4D1A-487D-BAC4-3A06DC3FC145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216B1697-4D1A-487D-BAC4-3A06DC3FC145}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A103B716-1BA7-4FB1-8C2F-8FE315B07FDA}
+	EndGlobalSection
+EndGlobal
