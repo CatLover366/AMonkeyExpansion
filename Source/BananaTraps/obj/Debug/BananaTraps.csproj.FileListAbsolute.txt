@@ -1,0 +1,4 @@
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\AMonkeyExpansion\Assemblies\BananaTraps.dll
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\AMonkeyExpansion\Source\BananaTraps\obj\Debug\BananaTraps.csprojAssemblyReference.cache
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\AMonkeyExpansion\Source\BananaTraps\obj\Debug\BananaTraps.csproj.CoreCompileInputs.cache
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\AMonkeyExpansion\Source\BananaTraps\obj\Debug\BananaTraps.dll
