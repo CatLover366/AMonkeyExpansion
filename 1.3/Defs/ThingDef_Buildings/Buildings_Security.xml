@@ -33,11 +33,6 @@
       <TrapMeleeDamage>20</TrapMeleeDamage>
       <TrapSpringChance>1.0</TrapSpringChance>
     </statBases>
-    <costList>
-      <ARCCRawBananas>1</ARCCRawBananas>
-    </costList>
-    <designationCategory>Security</designationCategory>
-    <designationHotKey>Misc6</designationHotKey>
     <building>
       <isTrap>true</isTrap>
       <trapDestroyOnSpring>true</trapDestroyOnSpring>
@@ -45,7 +40,6 @@
       <expandHomeArea>false</expandHomeArea>
       <ai_chillDestination>false</ai_chillDestination>
     </building>
-    <constructionSkillPrerequisite>1</constructionSkillPrerequisite>
     <placeWorkers>
       <li>PlaceWorker_NeverAdjacentTrap</li>
     </placeWorkers>
@@ -59,9 +53,6 @@
         <multiplier>0.05</multiplier>
       </li>
     </damageMultipliers>
-    <researchPrerequisites>
-      <li>Fabrication</li>
-    </researchPrerequisites>
   </ThingDef>
 
 </Defs>
