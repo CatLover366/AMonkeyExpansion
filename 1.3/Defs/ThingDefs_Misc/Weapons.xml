@@ -126,7 +126,6 @@
         <defaultProjectile>ARCCBananaBombArrow</defaultProjectile>
         <warmupTime>3.5</warmupTime>
         <range>25.9</range>
-        <forcedMissRadius>0</forcedMissRadius>
         <burstShotCount>1</burstShotCount>
         <soundCast>Shot_IncendiaryLauncher</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
