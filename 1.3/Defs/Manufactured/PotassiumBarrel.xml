@@ -4,7 +4,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>BART_Potassium</defName>
     <label>potassium barrel</label>
-    <description>A container filled with banana slurry. The sheer amounts of potassium in these bananas gives it great potential in power generation and production of high grade banana-based items.</description>
+    <description>A container filled with banana slurry. The sheer amounts of potassium in these bananas gives it great potential in power generation and production of high grade banana-based items, but also gives it great potential in exploding in a fireball.</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Manufactured/Potassium/PotassiumBarrel</texPath>
@@ -25,7 +25,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Explosive">
-        <explosiveRadius>1.1</explosiveRadius>
+        <explosiveRadius>3.9</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
         <explosiveExpandPerStackcount>0.069</explosiveExpandPerStackcount>
         <startWickOnDamageTaken>

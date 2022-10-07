@@ -83,7 +83,7 @@
     <constructEffect>ConstructMetal</constructEffect>
     <clearBuildingArea>false</clearBuildingArea>
     <researchPrerequisites>
-      <li>BiofuelRefining</li>
+      <li>ARCC_BananaPower</li>
     </researchPrerequisites>
   </ThingDef>
   
@@ -155,7 +155,7 @@ WARNING: This potassium slurry is highly reactive. If the storage container is b
     <constructEffect>ConstructMetal</constructEffect>
     <canOverlapZones>false</canOverlapZones>
     <researchPrerequisites>
-      <li>BiofuelRefining</li>
+      <li>ARCC_BananaPower</li>
     </researchPrerequisites>
   </ThingDef>
   
@@ -222,7 +222,7 @@ WARNING: This potassium slurry is highly reactive. If the storage container is b
     <constructEffect>ConstructMetal</constructEffect>
     <canOverlapZones>false</canOverlapZones>
     <researchPrerequisites>
-      <li>BiofuelRefining</li>
+      <li>ARCC_BananaPower</li>
     </researchPrerequisites>
   </ThingDef>
   
@@ -298,7 +298,7 @@ WARNING: This potassium slurry is highly reactive. If the storage container is b
     <designationHotKey>Misc4</designationHotKey>
     <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites>
-      <li>BiofuelRefining</li>
+      <li>ARCC_BananaPower</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
   </ThingDef>
