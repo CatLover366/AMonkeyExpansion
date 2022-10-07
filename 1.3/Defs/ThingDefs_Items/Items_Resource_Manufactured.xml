@@ -8,7 +8,7 @@
  <ThingDef ParentName="ResourceBase">
 
     <defName>ARCC_Banacea</defName>
-    <label>Banana Panacea</label>
+    <label>Banacea</label>
     <description>A mix of herbs, bananas, and zombie bits. When administered correctly, can cure scaria.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Medicine/Banacea</texPath>
