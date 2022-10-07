@@ -7,7 +7,7 @@
     <defName>ARCCBananaTrap</defName>
     <label>spike trap</label>
     <description>Five spikes under tension, connected to a touch-activated trigger. When the victim disturbs the trigger, the spikes spring forth and strike the victim. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
-    <thingClass>Building_TrapDamager</thingClass>
+    <thingClass>BananaTraps.Building_TrapBanana</thingClass> <!-- Applies slipped hediff and does Slipped sound instead of standard one -->
     <graphicData>
       <texPath>Security/ARCCBananaTrapArmed</texPath>
       <graphicClass>Graphic_Single</graphicClass>

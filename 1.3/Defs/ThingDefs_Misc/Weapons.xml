@@ -165,7 +165,7 @@
       <shaderType>TransparentPostLight</shaderType>
       <color>(254,189,58)</color>
     </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
+    <thingClass>BananaTraps.Projectile_BananaSplosive</thingClass>
     <projectile>
       <speed>65</speed>
       <damageDef>Bomb</damageDef>
