@@ -112,6 +112,20 @@
       </li>
     </stages>
   </ThoughtDef>
+	
+  <!--=================================== Generic Ingredient Thought ==========================================-->
+	
+  <ThoughtDef>
+    <defName>ARCCBananaIngredient</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>banana flavor</label>
+        <description>The fruitiness of bananas shockingly goes rather well with this!</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 
 
   <!--=================================== Meal recipes ==========================================-->
