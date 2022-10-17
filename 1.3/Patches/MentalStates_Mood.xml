@@ -3,19 +3,19 @@
     <Operation Class="PatchOperationReplace">
       <xpath>/Defs/MentalStateDef/beginLetterLabel</xpath>
       <value>
-        <beginLetterLabel>gone banannas</beginLetterLabel>
+        <beginLetterLabel>Mental Apedown!</beginLetterLabel>
       </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
       <xpath>/Defs/MentalBreakDef/label</xpath>
       <value>
-        <label>gone banannas</label>
+        <label>mental apedown</label>
       </value>
     </Operation>
     <Operation Class="PatchOperationReplace">
       <xpath>/Defs/MentalStateDef/label</xpath>
       <value>
-        <label>gone banannas</label>
+        <label>psychotic apeisode</label>
       </value>
     </Operation>
 </Patch>
