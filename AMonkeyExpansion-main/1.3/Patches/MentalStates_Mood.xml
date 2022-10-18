@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/MentalStateDef/beginLetterLabel</xpath>
+      <value>
+        <beginLetterLabel>Mental Apedown!</beginLetterLabel>
+      </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/MentalBreakDef/label</xpath>
+      <value>
+        <label>mental apedown</label>
+      </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/MentalStateDef/label</xpath>
+      <value>
+        <label>psychotic apeisode</label>
+      </value>
+    </Operation>
+</Patch>

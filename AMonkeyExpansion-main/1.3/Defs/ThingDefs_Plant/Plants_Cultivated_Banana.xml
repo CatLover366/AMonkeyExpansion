@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!--=========================== Tree crops ==============================-->
+
+  <ThingDef ParentName="TreeBase">
+    <defName>ARCCPlant_TreeBanana</defName>
+    <label>banana tree</label>
+    <description>A tropical tree that produces bananas, genetically engineered to well... make the bananas it produces very special, and survive in slightly less-warm climates. These banana trees do not wither away and die when their fruit is harvested.</description>
+    <graphicData>
+      <texPath>Things/Plant/ARCCBananaPalm</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+        <shadowData>
+          <volume>(0.15, 0.3, 0.15)</volume>
+          <offset>(0,0,-0.38)</offset>
+        </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <statBases>
+      <Beauty>2</Beauty>
+      <BeautyOutdoors>2</BeautyOutdoors>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+    <minifiedDef IsNull="True" />
+    <ingestible />
+    <plant>
+      <dieIfLeafless>true</dieIfLeafless>
+      <growDays>15</growDays>
+      <visualSizeRange>0.8~2.0</visualSizeRange>
+      <sowMinSkill>8</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <sowResearchPrerequisites Inherit="False">
+        <li>ARCC_BananaSowing</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0.15</topWindExposure>
+      <mustBeWildToSow>false</mustBeWildToSow>
+      <immatureGraphicPath>Things/Plant/ARCCBananaPalm_Immature</immatureGraphicPath>
+      <harvestWork>400</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestAfterGrowth>0.30</harvestAfterGrowth>
+      <forceIsTree>true</forceIsTree>
+      <harvestYield>30</harvestYield>
+      <harvestedThingDef>ARCCRawBananas</harvestedThingDef>
+      <harvestFailable>true</harvestFailable>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>ARCCRawBananas</defName>
+    <label>bananas</label>
+    <description>Delicious bananas. Nice to eat on their own. They are botanically classed as berries.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/ARCCBananas</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.2</MarketValue>
+      <Mass>0.027</Mass>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <tasteThought></tasteThought>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+  </ThingDef>
+
+  <!--=========================== Tree cloth ==============================-->
+
+  <ThingDef ParentName="TreeBase">
+    <defName>ARCCPlant_TreeIronPalm</defName>
+    <label>ironpalm</label>
+    <description>A genetically modified banana tree. It has tragically lost the ability to produce delicious banana fruit, now producing hard and unappetizing seed pods. This tree is instead focused on developing highly durable palm fronds, hence why the tree is dubbed "ironpalm." These fronds are durable enough to be used in tailoring as an stronger alternative to cloth, making this material a popular choice on midworlds.</description>
+    <graphicData>
+      <texPath>Things/Plant/ARCCIronpalm</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+        <shadowData>
+          <volume>(0.15, 0.3, 0.15)</volume>
+          <offset>(0,0,-0.38)</offset>
+        </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <statBases>
+      <Beauty>2</Beauty>
+      <BeautyOutdoors>2</BeautyOutdoors>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+    <minifiedDef IsNull="True" />
+    <ingestible />
+    <plant>
+      <dieIfLeafless>true</dieIfLeafless>
+      <growDays>15</growDays>
+      <visualSizeRange>0.8~2.0</visualSizeRange>
+      <sowMinSkill>8</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <sowResearchPrerequisites Inherit="False">
+        <li>ARCC_BananaSowing</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0.15</topWindExposure>
+      <mustBeWildToSow>false</mustBeWildToSow>
+      <immatureGraphicPath>Things/Plant/ARCCIronpalm_Immature</immatureGraphicPath>
+      <harvestWork>400</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestAfterGrowth>0.30</harvestAfterGrowth>
+      <forceIsTree>true</forceIsTree>
+      <harvestYield>25</harvestYield>
+      <harvestedThingDef>ARCCIronpalmFronds</harvestedThingDef>
+      <harvestFailable>true</harvestFailable>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ARCCIronpalmFronds</defName>
+    <label>ironpalm fronds</label>
+    <description>Leaves that appear fragile. Their delicate appearance belies their utility and strength. Capable of being tightly woven and seen into a durable mesh, these fronds are fire resistant and can retain temperature remarkably well.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/ARCCIronpalmLeaves</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <StuffPower_Armor_Sharp>1.1</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>2.0</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>25</StuffPower_Insulation_Heat>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>2.5</MarketValue>
+      <Mass>0.026</Mass>
+      <Flammability>0.3</Flammability>
+      <DeteriorationRate>4</DeteriorationRate>
+    </statBases>
+    <burnableByRecipe>true</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <minRewardCount>30</minRewardCount>
+    <stuffProps>
+      <statFactors>
+        <Flammability>0.3</Flammability>
+        <Beauty>2</Beauty>
+      </statFactors>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+      <color>(0,77,26)</color>
+      <commonality>0.1</commonality>
+      <allowColorGenerators>true</allowColorGenerators>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+    <allowedArchonexusCount>69</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>

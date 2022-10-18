@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+ <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>ARCCGun_Banana</defName>
+    <label>dense banana bunch</label>
+    <description>A bunch of bananas that are meant to be thrown at an enemy. It achieves lethality by forcing the wielder to adopt a particular throwing technique that exploits the weaknesses of enemies. Or it could be the chunks of heavy adonana bricks that were stuffed inside the bananas causing that much damage.</description>
+	
+    <graphicData>
+      <texPath>Things/Weapons/ARCCbananabunch</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>ARCC_BasicBananaWeapons</researchPrerequisite>
+      <recipeUsers>
+      	<li>FueledSmithy</li>	
+      	<li>ElectricSmithy</li>			
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>2</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+        <ARCCAdonana>50</ARCCAdonana>
+        <ARCCRawBananas>75</ARCCRawBananas>
+    </costList>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ARCCBullet_Banana</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>20.9</range> <!--(30)-->
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+		<soundCast>ThrowGrenade</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>banana</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+      <li>
+        <label>banana stem</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>ARCCBullet_Banana</defName>
+    <label>dense banana</label>
+    <graphicData>
+      <texPath>Things/Projectile/ARCCairbornebanana</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>50</speed>
+    </projectile>
+	
+	<comps>
+      <li Class="CustomAmmo.CompProperties_ProjectileEffects">
+        <rotating>true</rotating>
+        <rotationSpeed>40</rotationSpeed>
+        <counterClockwise>true</counterClockwise>
+      </li> 
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>ARCCBananaBoomBow</defName>
+    <label>banana boom bow</label>
+    <description>A seemingly primitive bow composed of fragile looking bananas tied together. Any normal, reasonable individual would say that this is a terrible weapon and a downgrade from a standard wooden bow. And they would be right. But with banana technology, even downgrades are upgrades. While this bow is slower to nock and draw than most other bows, it can fire potassium enriched explosive arrows. These arrows also have a high chance to leave behind a banana peel, creating even more problems for your enemy besides having an explosion rend their body to shreds.</description>
+    <graphicData>
+      <texPath>Things/Weapons/ARCCBananaBow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+    <generateCommonality>0.0</generateCommonality>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>3.4</Mass>
+      <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <ARCCAdonana>75</ARCCAdonana>
+      <BART_Potassium>150</BART_Potassium>
+      <ARCCRawBananas>2</ARCCRawBananas>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>ARCC_IntermediateBananaWeapons</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ARCCBananaBombArrow</defaultProjectile>
+        <warmupTime>3.5</warmupTime>
+        <range>25.9</range>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Bow_Large</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>ARCCBananaBombArrow</defName>
+    <label>banana bomb arrow</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(254,189,58)</color>
+    </graphicData>
+    <thingClass>BananaTraps.Projectile_BananaSplosive</thingClass>
+    <projectile>
+      <speed>65</speed>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <explosionRadius>1.1</explosionRadius>
+      <preExplosionSpawnThingDef>ARCCBananaTrap</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.0</preExplosionSpawnChance>
+      <ai_IsIncendiary>false</ai_IsIncendiary>
+      <shadowSize>0.6</shadowSize>
+    </projectile>
+  </ThingDef>
+  
+  
+  </Defs>

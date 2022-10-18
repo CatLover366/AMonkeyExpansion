@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--==================== Trap ======================== -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ARCCBananaTrap</defName>
+    <label>banana peel</label>
+    <description>A banana peel strategically placed on the ground. While it does little damage on its own, it causes enemies to slip and slide due to the natural gel secreted from banana peels. This slows the enemy down greatly.</description>
+    <thingClass>BananaTraps.Building_TrapBanana</thingClass> <!-- Applies slipped hediff and does Slipped sound instead of standard one -->
+    <graphicData>
+      <texPath>Security/ARCCBananaTrapArmed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0,0,1,0.15)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <stealable>false</stealable>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <Mass>2.5</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>3200</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Beauty>-20</Beauty>
+      <Cleanliness>-5</Cleanliness>
+      <TrapMeleeDamage>20</TrapMeleeDamage>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+    <building>
+      <isTrap>true</isTrap>
+      <trapDestroyOnSpring>true</trapDestroyOnSpring>
+      <trapDamageCategory>Blunt</trapDamageCategory>
+      <expandHomeArea>false</expandHomeArea>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_NeverAdjacentTrap</li>
+    </placeWorkers>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>0.05</multiplier>
+      </li>
+      <li>
+        <damageDef>Thump</damageDef>
+        <multiplier>0.05</multiplier>
+      </li>
+    </damageMultipliers>
+  </ThingDef>
+
+</Defs>

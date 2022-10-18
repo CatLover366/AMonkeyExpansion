@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>ARCC_BananaSowing</defName>
+		<label>banana sowing</label>
+		<description>Learn how to grow banana trees, which produce delicious delicious bananas.</description>
+		<baseCost>1000</baseCost>
+		<tab>ARCCBananaMod</tab>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>TreeSowing</li>
+		</prerequisites>
+  <researchViewX>0.00</researchViewX>
+  <researchViewY>2.25</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ARCC_BananaCooking</defName>
+		<label>banana gastronomy</label>
+		<description>Examine basic cooking principles and see if they can be replicated with bananas.</description>
+		<baseCost>750</baseCost>
+		<tab>ARCCBananaMod</tab>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>ARCC_BananaSowing</li>
+		</prerequisites>
+  <researchViewX>0.00</researchViewX>
+  <researchViewY>2.75</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ARCC_BasicBananaWeapons</defName>
+		<label>basic banana weapons</label>
+		<description>Use basic weapon smithing concepts to create relatively basic banana based weaponry.</description>
+		<baseCost>750</baseCost>
+		<tab>ARCCBananaMod</tab>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>ARCC_BananaSowing</li>
+			<li>Smithing</li>
+		</prerequisites>
+  <researchViewX>1.00</researchViewX>
+  <researchViewY>2.25</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ARCC_BanaceaResearch</defName>
+		<label>banana curing</label>
+		<description>Examine basic anti scaria techniques and see if they can be reproduced with a mix of bananas and zombie bits.</description>
+		<baseCost>2000</baseCost>
+		<tab>ARCCBananaMod</tab>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>ARCC_BananaSowing</li>
+			<li>ARCC_BananaCooking</li>
+		</prerequisites>
+  <researchViewX>1.0</researchViewX>
+  <researchViewY>2.75</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ARCC_BananaPower</defName>
+		<label>banana power</label>
+		<description>Harness the power of bananas and potassium to produce an explosive compound of banana slurry, which has uses ranging from powering your base to producing special banana items.</description>
+		<baseCost>3000</baseCost>
+		<tab>ARCCBananaMod</tab>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>ARCC_BananaSowing</li>
+		</prerequisites>
+  <researchViewX>2.0</researchViewX>
+  <researchViewY>2.25</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ARCC_IntermediateBananaWeapons</defName>
+		<label>intermediate banana weapons</label>
+		<description>Utilize the power of the potassium slurry you have researched to create highly explosive weaponry.</description>
+		<baseCost>2500</baseCost>
+		<tab>ARCCBananaMod</tab>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>ARCC_BasicBananaWeapons</li>
+			<li>ARCC_BananaPower</li>
+			<li>Gunsmithing</li>
+		</prerequisites>
+  <researchViewX>2.0</researchViewX>
+  <researchViewY>2.75</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ARCC_AdvancedBananaPower</defName>
+		<label>advanced banana power</label>
+		<description>Study and refine potassium processing machinery in order to discover more efficient ways of producing potassium based power, as well as some unique ways to harness the banana sludge for other purposes.</description>
+		<baseCost>3500</baseCost>
+		<tab>ARCCBananaMod</tab>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>ARCC_BananaPower</li>
+		</prerequisites>
+  <researchViewX>3.0</researchViewX>
+  <researchViewY>2.25</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

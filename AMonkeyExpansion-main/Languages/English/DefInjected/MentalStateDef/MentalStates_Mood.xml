@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Berserk.label>Gone Bananas!</Berserk.label>
+  <Berserk.beginLetter>{0} has gone bananas.\n\n[PAWN_pronoun] will attack anyone [PAWN_pronoun] sees.</Berserk.beginLetter>
+  <Berserk.recoveryMessage>{0} is no longer going bananas.</Berserk.recoveryMessage>
+  <Berserk.baseInspectLine>Mental state: Going bananas</Berserk.baseInspectLine>
+  
+  <WanderConfused.label>mental apedown</WanderConfused.label>
+  <WanderConfused.beginLetterLabel>Mental Apedown!</WanderConfused.beginLetterLabel>
+  <WanderConfused.beginLetter>{0} is having a mental apedown and is wandering around confused.</WanderConfused.beginLetter>
+  <WanderConfused.recoveryMessage>{0}'s mental apedown has come to an end.</WanderConfused.recoveryMessage>
+  <WanderConfused.baseInspectLine>Mental state: Wandering around having a mental apedown</WanderConfused.baseInspectLine>
+  
+  <WanderPsychotic.label>psychotic apeisode</WanderPsychotic.label>
+  <WanderPsychotic.beginLetterLabel>Psychotic Apeisode!</WanderPsychotic.beginLetterLabel>
+  <WanderPsychotic.beginLetter>{0} is wandering around having a psychotic apeisode.</WanderPsychotic.beginLetter>
+  <WanderPsychotic.recoveryMessage>{0}'s psychotic apeisode has come to an end.</WanderPsychotic.recoveryMessage>
+  <WanderPsychotic.baseInspectLine>Mental state: Wandering around having a psychotic apeisode.</WanderPsychotic.baseInspectLine>
+  
+  <Tantrum.label>going ape</Tantrum.label>
+  <Tantrum.beginLetterLabel>Going Ape!</Tantrum.beginLetterLabel>
+  <Tantrum.beginLetter>{0} is going ape.\n\n[PAWN_pronoun] will smash up random furniture, items and structures.</Tantrum.beginLetter>
+  <Tantrum.recoveryMessage>{0} is no longer going ape.</Tantrum.recoveryMessage>
+  <Tantrum.baseInspectLine>Mental state: Going Ape.</Tantrum.baseInspectLine>
+  
+  <TargetedTantrum.beginLetter>{0} is going ape.\n\n[PAWN_pronoun] is going to destroy {1}.</TargetedTantrum.beginLetter>
+  <BedroomTantrum.beginLetter>{0} going ape.\n\n[PAWN_pronoun] is going to smash things in [PAWN_possessive] room.</BedroomTantrum.beginLetter>
+</LanguageData>

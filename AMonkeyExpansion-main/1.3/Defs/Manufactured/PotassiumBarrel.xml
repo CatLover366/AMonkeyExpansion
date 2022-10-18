@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <!--=============== Potassium ====================-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>BART_Potassium</defName>
+    <label>potassium barrel</label>
+    <description>A container filled with banana slurry. The sheer amounts of potassium in these bananas gives it great potential in power generation and production of high grade banana-based items, but also gives it great potential in exploding in a fireball.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Manufactured/Potassium/PotassiumBarrel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <stackLimit>150</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>4</MarketValue>
+      <Mass>0.07</Mass>
+      <Flammability>2</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.069</explosiveExpandPerStackcount>
+        <startWickOnDamageTaken>
+          <li>Flame</li>
+        </startWickOnDamageTaken>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <wickTicks>70~150</wickTicks>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>
