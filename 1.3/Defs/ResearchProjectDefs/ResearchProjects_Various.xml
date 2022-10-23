@@ -103,4 +103,19 @@
   <researchViewY>2.25</researchViewY>
 	</ResearchProjectDef>
 
+	<ResearchProjectDef>
+		<defName>ARCC_BananaSecurity</defName>
+		<label>potassium security</label>
+		<description>Harness the power of potassium to defend your base. Research turrets that will draw ammo directly from your potassium power grid to fire high velocity bananas at all who dare oppose you.</description>
+		<baseCost>4500</baseCost>
+		<tab>ARCCBananaMod</tab>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>ARCC_AdvancedBananaPower</li>
+			<li>HeavyTurrets</li>
+		</prerequisites>
+  <researchViewX>4.0</researchViewX>
+  <researchViewY>2.25</researchViewY>
+	</ResearchProjectDef>
+
 </Defs>
