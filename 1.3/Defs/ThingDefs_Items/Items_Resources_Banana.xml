@@ -26,6 +26,8 @@
     <allowedArchonexusCount>69</allowedArchonexusCount>
   </ThingDef>
 
+  <!--=========================== Banana Brick ==============================-->
+
   <ThingDef ParentName="StoneBlocksBase">
     <defName>ARCCAdonana</defName>
     <label>adonana bricks</label>
@@ -113,12 +115,66 @@
     </products>
   </RecipeDef>
 
-  <ThingDef ParentName="ResourceBase">
-    <defName>ARCCBaninium</defName>
-    <label>baninium</label>
-    <description>Advanced spacer tech structural material. Bananiuim is extremely strong due to its unique molecular structure, and Bananas.</description>
+  <!--=========================== Banana Fabric ==============================-->
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>ARCCBananaLeather</defName>
+    <label>banana peel leather</label>
+    <description>A sort of leather made from tanning and drying banana peels into one large piece of material. It is surprisingly durable despite its questionable origins.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Plasteel</texPath>
+      <color>(204,170,0)</color>
+    </graphicData>
+    <stuffProps>
+      <color>(204,170,0)</color>
+      <commonality>0.0</commonality>
+      <statFactors>
+        <Beauty>2</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>Make_ARCCBananaLeather</defName>
+    <label>make banana peel leather</label>
+    <description>Dry and tan banana peels into a leathery material.</description>
+    <jobString>Making banana leather.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>900</workAmount>
+    <targetCountAdjustment>75</targetCountAdjustment>
+    <recipeUsers>
+      <li>ElectricTailoringBench</li>
+      <li>HandTailoringBench</li>
+      <li>CraftingSpot</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ARCCRawBananas</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ARCCRawBananas</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ARCCBananaLeather>35</ARCCBananaLeather>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ARCCBananium</defName>
+    <label>bananium</label>
+    <description>Advanced spacer tech structural material. Bananium has remarkable strength and durability due to being enhanced with pure potassium power.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/BanaSteel</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <soundInteract>Metal_Drop</soundInteract>

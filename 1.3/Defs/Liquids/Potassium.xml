@@ -303,4 +303,163 @@ WARNING: This potassium slurry is highly reactive. If the storage container is b
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
   </ThingDef>
   
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>IndustrialPotassiumPoweredGenerator</defName>
+    <label>industrial potassium powered generator</label>
+    <description>Produces power from thermal energy. The generator introduces water into the pool of potassium-rich slurry, creating explosions that power the generator. This would normally never be safe to ever use in a practical sense due to the generation of highly explosive hydrogen, but superior banana engineering prevents the generator exploding in a giant fireball. This variant produces energy slightly more efficiently than its smaller counterpart.</description>
+    <thingClass>Building</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Buildings/Generator/IndustrialPotassiumGenerator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,6)</drawSize>
+      <shadowData>
+        <volume>(1.93,1,1.69)</volume>
+        <offset>(-0.03,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>5500</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-20</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(3,5)</size>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <costList>
+      <Steel>250</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-3500</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+        <soundAmbientProducingPower>ChemfuelFiredGenerator_Ambience</soundAmbientProducingPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>200.0</fuelConsumptionRate>
+        <fuelCapacity>100.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>BART_Potassium</li>
+          </thingDefs>
+        </fuelFilter>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>0</explosiveRadius>
+        <explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <wickTicks>70~150</wickTicks>
+      </li>
+    </comps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>ARCC_AdvancedBananaPower</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <ThingDef ParentName="LampBase" >
+    <defName>PotassiumStandingLamp</defName>
+    <label>filtered potassium powered lamp</label>
+    <description>This lamp harnesses the power of banana sludge to output a huge area of light. Perfect for lighting up large areas of darkness. The light system has some extra tuning and refinement in order to emit light that will not hurt anyone's eyes.</description>
+    <graphicData>
+      <texPath>Buildings/Furniture/PotassiumLight</texPath>
+      <drawSize>(3,3)</drawSize>
+      <drawOffset>(0,0,0.8)</drawOffset>
+    </graphicData>
+    <uiIconScale>0.33</uiIconScale>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <WorkToBuild>330</WorkToBuild>
+      <Mass>4.5</Mass>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>30</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>10.0</fuelConsumptionRate>
+        <fuelCapacity>10.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>BART_Potassium</li>
+          </thingDefs>
+        </fuelFilter>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>ARCC_AdvancedBananaPower</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="LampBase" >
+    <defName>PotassiumStandingLampYellow</defName>
+    <label>potassium powered lamp</label>
+    <description>This lamp harnesses the power of banana sludge to output a huge area of light. Perfect for lighting up large areas of darkness. This lamp is not for the faint of heart, as the sheer yellowness of the light produced by this lamp has been known to cause permanent blindness. This lamp has a slightly larger radius, but is it really worth the searing neon yellow coursing through your retinas whenever you just happen to glance at it?</description>
+    <graphicData>
+      <texPath>Buildings/Furniture/PotassiumLight</texPath>
+      <drawSize>(3,3)</drawSize>
+      <drawOffset>(0,0,0.8)</drawOffset>
+    </graphicData>
+    <uiIconScale>0.33</uiIconScale>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <WorkToBuild>330</WorkToBuild>
+      <Mass>4.5</Mass>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>35</glowRadius>
+        <glowColor>(255,225,0,255)</glowColor>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>35</glowRadius>
+        <glowColor>(255,225,0,255)</glowColor>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>10.0</fuelConsumptionRate>
+        <fuelCapacity>10.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>BART_Potassium</li>
+          </thingDefs>
+        </fuelFilter>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>ARCC_AdvancedBananaPower</li>
+    </researchPrerequisites>
+  </ThingDef>
 </Defs>
